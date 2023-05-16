@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap fonts Link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- Font Awesome Link -->
+  <script src="https://kit.fontawesome.com/da00ace7d8.js" crossorigin="anonymous"></script>
+  <!-- bootstrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Role Permissions</title>
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="./public/css/style.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+  </script>
+</head>
+
+<body>
+  <!-- container start -->
+  <div class="container-fluid-xxl">
+    <!---------------------------------- Navbar Start------------------------->
+    <nav class="navbar pb-1 pt-0  navbar-expand-lg navbar-dark">
+      <img src="./assests/image/IMG-20230306-WA0005.jpg" alt="" class="img-fluid insight ms-4">
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-4 mx-lg-0 mt-3 mt-md-0  ">
+            <a class="nav-link  active  " aria-current="page" href="#"><i
+                class="bi bi-speedometer2  pe-1"></i>Dashboard</a>
+          </li>
+          <li class="nav-item mx-4 mx-lg-0 ">
+            <a class="nav-link active " href="#"><i class="bi bi-people-fill pe-1"></i>Students</a>
+          </li>
+          <li class="nav-item mx-4 mx-lg-0 ">
+            <a class="nav-link active " href="#"><i class="bi bi-people-fill pe-1"></i>Reports</a>
+          </li>
+          <li class="nav-item mx-4 mx-lg-0  ">
+            <a class="nav-link active " href="#"><i class="fa-solid fa-users pe-1"></i>Users</a>
+          </li>
+          <li class="nav-item mx-4 mx-lg-0 ">
+            <a class="nav-link active " href="#">Licenses</a>
+          </li>
+          <li class="nav-item mx-4 mx-lg-0 ">
+            <a class="nav-link active text-warning " href="#"><i class="bi bi-gear pe-1"></i>Permissions</a>
+          </li>
+          <li class="nav-item mx-4 mx-lg-0 ">
+            <a class="nav-link active " href="#"><i class="bi bi-question-circle pe-1"></i>Help</a>
+          </li>
+        </ul>
+      </div>
+      <!-- nav right icon start -->
+      <div class="collapse navbar-collapse ps-5 ms-5" id="navbarSupportedContent">
+        <ul class="navbar-nav  ms-auto  align-items-end mx-4 mx-lg-0 d-flex ">
+          <div class="d-flex">
+            <li class="nav-item d-flex mt-md-4 mt-1 mx-1 ">
+              <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-bell-fill"></i></a>
+            </li>
+            <li class="nav-item d-flex mt-md-4 mt-1 mx-1 ">
+              <a class="nav-link active" aria-current="page" href="#"><i
+                  class="bi bi-gear-fill border-end pe-2"></i></a>
+            </li>
+            <li class="nav-item align-items-center  mx-1 pt-md-3 ">
+              <a class="nav-link active " aria-current="page" href="#">
+                <p class="bg-light rounded-circle text-secondary p-2 fw-bold">AT </p>
+              </a>
+
+            </li>
+            <li class="nav-item mt-lg-3 pt-0 mt-md-3  me-1">
+              <a class="nav-link active " aria-current="page" href="#">
+                <p>Admin Two <br> Admin</p>
+              </a>
+            </li>
+          </div>
+          </a>
+          </li>
+        </ul>
+      </div>
+      <!-- nav right icon end -->
+    </nav>
+    <!--------------------------------- Navbar End --------------------------->
+    <!-- user start -->
+    <div class="bg-main pt-3 pb-0">
+      <div class="user container-fluid-xxl  d-flex justify-content-between d-inline-block mx-4 ">
+        <a class=" text-decoration-none">
+          <h4>Role Permissions</h4>
+        </a>
+      </div>
+      <!-- user end -->
+      <!-- active user start -->
+      <div class="container-fluid-xxl mx-4 mt-4">
+        <!-- active user ul start -->
+        <ul class="list-unstyled active d-lg-flex  text-secondary" id="active">
+          <!-- list 1 -->
+          <div class="d-sm-flex  list1 justify-content-between ">
+            <li class="mx-2 border-bottom border-primary admin "><i class="bi bi-shield-lock mx-1"></i> Admin</li>
+            <li class="mx-2 "><i class="bi bi-people-fill mx-1"></i>District Admin</li>
+            <li class="mx-2 "><i class="bi bi-person-bounding-box mx-1"></i>School Admin</li>
+          </div>
+          <!-- list 1 end -->
+          <!-- list2 start -->
+          <div class="d-sm-flex  list2 justify-content-between">
+            <li class="mx-2 mx-sm-0 mt-sm-3 mt-lg-0 teach"><i class="bi bi-person-fill mx-1"></i></i>Teacher</li>
+            <li class="mx-2 pe-sm-4 mt-sm-3 mt-lg-0  spec"><i class="bi bi-person-fill-add mx-1"></i></i>Specialist</li>
+
+          </div>
+          <!-- list 2 end -->
+        </ul>
+        <!-- acive user ul end -->
+        <!-- Table start -->
+        <section class="intro">
+          <div class="row justify-content-between">
+            <div class="col-12">
+              <div class="card border-0 ">
+                <div class="card-body px-0 py-0">
+                  <div class="table-responsive text-nowrap border-light">
+                    <table class="table table-hover mb-0">
+                      <thead>
+                      </thead>
+                      <tbody class="justify-content-between border-light">
+                        <tr class="tablehead">
+                          <th class=" border-light align-items-center" colspan="4" scope="row">
+                            <h6>Country</h6>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Create</td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Edit</td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Delete</td>
+
+                        </tr>
+                        <tr class="tablehead">
+                          <th class=" border-light" colspan="4" scope="row">
+                            <h6 class="pt-1">State</h6>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Create</td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Edit</td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Delete</td>
+                        </tr>
+                        <tr class="tablehead">
+                          <th class=" border-light" colspan="4" scope="row">
+                            <h6 class="pt-1">District</h6>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Create</td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Edit</td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Delete</td>
+                        </tr>
+                        <tr class="tablehead">
+                          <th class=" border-light" colspan="4" scope="row">
+                            <h6 class="pt-1">School</h6>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Create</td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Edit</td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Delete</td>
+                        </tr>
+                        <tr class="tablehead">
+                          <th class=" border-light" colspan="4" scope="row">
+                            <h6 class="pt-1">Student</h6>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Create
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Edit
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Delete
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Create
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Edit
+                          </td>
+                        </tr>
+                        <tr class="tablehead">
+                          <th class=" border-light" colspan="4" scope="row">
+                            <h6 class="pt-1">Student Test</h6>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Create
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                        </tr>
+                        <tr class="tablehead">
+                          <th class=" border-light" colspan="4" scope="row">
+                            <h6 class="pt-1">User</h6>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Create
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Edit
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Delete
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Create
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Edit
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Delete
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Create
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Show
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Edit
+                          </td>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" checked type="checkbox">Countries Delete
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 text-muted"><input class="mx-2 py-3" type="checkbox">Countries Create</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- table end -->
+        <!-- btn  start -->
+        <div class="d-flex show mt-3 mb-5 justify-content-left">
+          <div class="btn-group">
+            <button class="btn  btn-save text-light mx-1 py-2 text-secondary btn-sm" type="button">
+              Save Permissions
+            </button>
+          </div>
+          <!-- btn end -->
+        </div>
+        <!-- active end -->
+      </div>
+      <!-- bg main end -->
+      <div class="footer container-fluid-xxl  text-center text-muted pt-4 py-2 align-items-center mb-0">
+        <h6>c2023 Language Dynamics Group.LLC</h6>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

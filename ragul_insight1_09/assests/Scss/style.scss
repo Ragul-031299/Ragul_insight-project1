@@ -1,0 +1,88 @@
+@import "./abstract/variables";
+@import "./mixings/breakpoints";
+@import "./abstract/common";
+@import "./include/buttons";
+@import "./include/header";
+@import "./include/footer";
+
+// logo start
+.bg-main {                                 //role logo
+  background-color: $main-color;
+  .container-fluid-xxl {
+    h4 {                                   //logo text
+      color: $blue-color;
+    }
+    span {
+      background-color: $gray-color;
+      font-size: 0.8rem;
+    }
+  }
+  // main container start
+  .container-fluid-xxl {                //main container 
+    ul {
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      @include media-max-sm {
+        display: flex;
+        justify-content: space-between;
+      }
+      .list1 {                       //second headings admin
+        @include media-max-sm {
+          display: grid;
+          li {
+            margin-top: 1rem;
+          }
+        }
+      }
+      .list2 {
+        @include media-max-sm {
+          display: grid;
+          .teach {
+            margin-top: 3.3rem;
+          }
+          .spec {
+            margin-top: 1rem;
+          }
+          li {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+    // table start
+    .intro {                                   //table start
+      .card {
+        border-radius: 6px;
+        .card-body {
+          .table {
+            thead {
+              tr {
+                background-color: $main-color;
+                th {
+                  font-weight: bolder;
+                  letter-spacing: 0.2px;
+                  font-size: 14.5px;
+                }
+              }
+            }
+            tbody {                       //tbody
+              .tablehead {
+                background-color: $main-color;
+              }
+              tr {
+                th {
+                  font-weight: 400;
+                  font-size: 14px;
+                }
+                td {
+                  font-size: 13px;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
